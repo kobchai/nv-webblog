@@ -1,6 +1,7 @@
 // console.log('Hello nodejs server')
 let express = require('express')
 let bodyParser = require('body-parser')
+let cors = require('cors')
 
 const {sequelize} = require('./models')
 
@@ -10,6 +11,7 @@ const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors())
 
 require('./routers')(app)
 
