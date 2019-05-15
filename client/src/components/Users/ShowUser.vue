@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="this.user">
         <h1>Show User</h1>
         <p>id: {{ user.id }}</p>
         <p>ชือ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
