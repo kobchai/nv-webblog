@@ -8,6 +8,10 @@ import UserCreate from '@/components/Users/CreateUser'
 import UserEdit from '@/components/Users/EditUser'
 import UserShow from '@/components/Users/ShowUser'
 
+// Authen
+import Login from '@/components/Login'
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -31,6 +35,12 @@ export default new Router({
       path: '/user/:userId',
       name: 'user',
       component: UserShow
-    }
+    },
+    // authen
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
   ]
 })
