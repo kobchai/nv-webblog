@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p><button v-on:click="logout">Logout</button></p>
         <h1>Get All Users</h1>
         <!-- <div v-if="users.length">
             <h4>จำนวนผู้ใช้งาน: {{ users.length }}</h4>
@@ -70,7 +71,14 @@ export default {
         },
         async refreshData() {
             this.users = (await UsersService.index()).data
-        }
+        },
+        logout () {
+            this.$store.dispatch('setToken', null)
+            this.$store.dispatch('setUser', null)
+            this.$router.push({
+                name: 'login'
+            })
+        },
     }
 }
 </script>
