@@ -32,12 +32,13 @@ module.exports = (sequelize, DataTypes) => {
   })
 
   User.prototype.comparePassword = function (password) {
-    // if (password == this.password) {
-    //   return true
-    // }
-    // return false
+    if (password == this.password) {
+      return true
+    }
+    return false
 
-    return bcrypt.compareSync(password, this.password)
+    // return bcrypt.compareSync(password, this.password)
+    // return bcrypt.comparePassword(password, this.password)
   }
 
   User.associate = function (models) {}
