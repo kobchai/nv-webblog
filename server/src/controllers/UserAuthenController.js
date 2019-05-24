@@ -36,6 +36,7 @@ module.exports = {
             }
 
             const isPasswordValid = await user.comparePassword(password)
+            // const isPasswordValid = true
             if (!isPasswordValid) {
                 return res.status(403).send({
                     error: 'User/Password not correct'
@@ -51,7 +52,7 @@ module.exports = {
             })
 
         } catch (error) {
-            res.status(400).send({
+            res.status(500).send({
                 error: 'Error! from get user'
             })
         }
