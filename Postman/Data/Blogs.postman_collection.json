@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "f5130e2d-4486-46a5-983a-868481561d8f",
+		"name": "Blogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Blog - localhost:8081/blog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"blog title\",\n    \"thumbnail\": \"null\",\n    \"pictures\": \"null\",\n    \"content\": \"content\",\n    \"category\": \"category\",\n    \"status\": \"status\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/blog",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"blog"
+					]
+				},
+				"description": "Create new Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Blog - localhost:8081/blog/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"blog title put\",\n    \"thumbnail\": \"null put\",\n    \"pictures\": \"null put\",\n    \"content\": \"content put\",\n    \"category\": \"category put\",\n    \"status\": \"status put\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/blog/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"blog",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Blogs - localhost:8081/blogs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/blogs",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Blog - localhost:8081/blog/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/blog/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"blog",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - Blog - localhost:8081/blog/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/blog/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"blog",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
