@@ -18,7 +18,7 @@
           Upload Successful.
         </p>
       </div>
-  </form>
+    </form>
   </div>
 </template>
 
@@ -34,13 +34,13 @@ export default {
   data () {
     return {
       BASE_URL: "http://localhost:8081/assets/uploads/",
-        error: null,
-        // uploadedFiles: [],
-        uploadError: null,
-        currentStatus: null,
-        uploadFieldName: "userPhoto",
-        uploadedFileNames:[]
-      }
+      error: null,
+      // uploadedFiles: [],
+      uploadError: null,
+      currentStatus: null,
+      uploadFieldName: "userPhoto",
+      uploadedFileNames:[]
+    }
   },
   methods: {
     navigateTo (route) {
@@ -102,7 +102,7 @@ export default {
     }
   },
   created () {
-    this.reset();
+    this.reset()
   }
 }
 </script>
