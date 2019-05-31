@@ -2,8 +2,11 @@
     <div>
         <h1>Get all blogs</h1>
         <!-- <p><button v-on:click="logout">Logout</button></p> -->
-        <h4>จำนวน blog {{ blogs.length }}</h4>
         <p><button v-on:click="navigateTo('/blog/create')">สร้าง blog</button></p>
+        <h4>จำนวน blog {{ blogs.length }}</h4>
+        <div v-if="blogs.length === 0" class="empty-blog">
+            *** ไม่มีข้อมูล ***
+        </div>        
         <div v-for="blog in blogs" v-bind:key="blog.id">
             <p>id: {{ blog.id }}</p>
             <p>title: {{ blog.title }}</p>
@@ -62,5 +65,11 @@ export default {
 </script>
 
 <style scoped>
-
+    .empty-blog {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background: darksalmon;
+        color: white;
+    }
 </style>

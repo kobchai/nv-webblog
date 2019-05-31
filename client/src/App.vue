@@ -29,4 +29,9 @@ export default {
   .fade-enter-to {
     opacity: 1;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
 </style>
